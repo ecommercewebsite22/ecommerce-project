@@ -16,6 +16,11 @@ CREATE TABLE products(
   product_price NUMERIC
 );
 
+CREATE TABLE product_details(
+  details_description varchar(255),
+  details_images varchar(255),
+);
+
 CREATE TABLE history(
   cart_no SERIAL PRIMARY KEY AUTO,
   user_id INT FOREIGN KEY REFERENCES user_info(user_id)

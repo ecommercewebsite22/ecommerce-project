@@ -16,19 +16,15 @@ CREATE TABLE products(
   product_price NUMERIC
 );
 
-CREATE TABLE cart(
+CREATE TABLE history(
   cart_no SERIAL PRIMARY KEY AUTO,
-  user_id INT REFERENCES user_info(user_id),
-  product_sku INT REFERENCES products(product_sku),
-  
-  
-
-CREATE TABLE order_history(
-  order_no SERIAL PRIMARY KEY AUTO,
-  account_id INT REFERENCES customer_profile(account_id),
-  sku INT,
-  product_name varchar(30),
-  unit_cost NUMERIC,
-  quantity INT,
+  user_id INT FOREIGN KEY REFERENCES user_info(user_id)
   date TIMESTAMP
+);
+
+CREATE TABLE cart(
+  cart_subID SERIAL PRIMARY KEY AUTO REFERENCES cart_history(cart_no),
+  product_sku INT REFERENCES products(product_sku),
+  cart_quantity INT,
+  product_price NUMERIC REFERENCES products(product_price)
 );

@@ -1,24 +1,29 @@
-CREATE TABLE customer_login(
-  username varchar(20) PRIMARY KEY AUTO,
-  password varchar(20)
-);
-
-CREATE TABLE customer_profile(
-  account_id SERIAL PRIMARY KEY AUTO,
+CREATE TABLE user_info(
+  user_id SERIAL PRIMARY KEY AUTO,
+  username varchar(50),
+  password varchar(50),
   first_name varchar(20),
   last_name varchar(20),
-  email varchar(30)
+  email varchar(50),
+  user_type varchar(10)
 );
 
 CREATE TABLE products(
-  serial_no SERIAL PRIMARY KEY AUTO,
+  product_sku SERIAL PRIMARY KEY AUTO,
   product_name varchar(30),
   product_image varchar(255),
-  quantity INT,
-  price NUMERIC
+  product_quantity INT,
+  product_price NUMERIC
 );
 
-CREATE order_history(
+CREATE TABLE cart(
+  cart_no SERIAL PRIMARY KEY AUTO,
+  user_id INT REFERENCES user_info(user_id),
+  product_sku INT REFERENCES products(product_sku),
+  
+  
+
+CREATE TABLE order_history(
   order_no SERIAL PRIMARY KEY AUTO,
   account_id INT REFERENCES customer_profile(account_id),
   sku INT,

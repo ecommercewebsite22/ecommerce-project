@@ -1,7 +1,5 @@
 package com.ecommerce.springbootrestdataecommercemaven.pojo;
 
-import java.util.List;
-
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -18,12 +16,10 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 
-public class Order {
+public class UserPojo {
+	private int userID;
 	@NotNull
-	private Integer orderNo, userID;
-	@NotNull
-	private String date;
-	@NotNull
-	private List<Product> orderItems;
+	private String username, password, firstname, lastname, email, usertype;
+
 	
 }

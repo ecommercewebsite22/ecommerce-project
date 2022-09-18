@@ -18,14 +18,14 @@ import lombok.ToString;
 @EqualsAndHashCode
 
 
-public class Product {
+public class ProductPojo {
 	private int sku, productQuantity, orderNo;
 	@NotNull
 	private String productName, productImage;
 	private double productPrice;
 	
 	// use this for new inventory products
-	public Product(int sku, String productName, String productImage, int productQuantity, double productPrice) {
+	public ProductPojo(int sku, String productName, String productImage, int productQuantity, double productPrice) {
 		this.sku = sku;
 		this.productName = productName;
 		this.productImage = productImage;

@@ -1,6 +1,6 @@
 package com.ecommerce.springbootrestdataecommercemaven.pojo;
 
-import java.util.List;
+
 
 import javax.validation.constraints.NotNull;
 
@@ -24,6 +24,6 @@ public class OrderPojo {
 	@NotNull
 	private String date;
 	@NotNull
-	private List<ProductPojo> orderItems;
+	private Boolean orderStatus;
 	
 }

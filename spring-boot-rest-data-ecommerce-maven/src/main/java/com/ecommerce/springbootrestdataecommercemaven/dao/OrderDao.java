@@ -4,8 +4,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ecommerce.springbootrestdataecommercemaven.entity.OrderEntity;
 
-public interface OrderDao extends JpaRepository<OrderEntity, Integer> {
+public interface OrderDao extends JpaRepository<OrderEntity,  Integer> {
 	
-	// Will work on Order queries here
+	
 
 }

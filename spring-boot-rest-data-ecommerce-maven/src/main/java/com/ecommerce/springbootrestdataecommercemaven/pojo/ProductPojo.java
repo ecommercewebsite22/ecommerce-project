@@ -19,20 +19,14 @@ import lombok.ToString;
 
 
 public class ProductPojo {
-	private int sku, productQuantity, orderNo;
+	
+	@NotNull
+	private Integer sku, productQuantity, orderNo;
 	@NotNull
 	private String productName, productImage;
-	private double productPrice;
+	@NotNull
+	private Double productPrice;
 	
-	// use this for new inventory products
-	public ProductPojo(int sku, String productName, String productImage, int productQuantity, double productPrice) {
-		this.sku = sku;
-		this.productName = productName;
-		this.productImage = productImage;
-		this.productQuantity = productQuantity;
-		this.productPrice = productPrice;
-		this.orderNo = 0;
-	}
-	
+
 }
 

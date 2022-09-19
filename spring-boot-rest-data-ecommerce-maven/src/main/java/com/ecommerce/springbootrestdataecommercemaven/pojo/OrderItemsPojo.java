@@ -21,7 +21,7 @@ public class OrderItemPojo {
 	private int itemId;
 	
 	@NotNull
-	private Integer suborderNo, orderNo, productSku, productQty;
+	private Integer orderNo, productSku, productQty;
 	@NotNull
 	private Double productPrice;
 	

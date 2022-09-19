@@ -21,7 +21,7 @@ import lombok.ToString;
 public class ProductPojo {
 	
 	@NotNull
-	private Integer sku, productQuantity, orderNo;
+	private Integer sku, productQuantity;
 	@NotNull
 	private String productName, productImage;
 	@NotNull

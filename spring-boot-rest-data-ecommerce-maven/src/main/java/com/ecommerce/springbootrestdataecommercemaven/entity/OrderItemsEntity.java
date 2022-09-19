@@ -21,7 +21,7 @@ public class OrderItemsEntity {
 	@Column(name = "product_sku")
 	private Integer productSku;
 	
-	@Column(name = "product_")
+	@Column(name = "product_qty")
 	private Timestamp productQty;
 	
 	@Column(name = "product_price")

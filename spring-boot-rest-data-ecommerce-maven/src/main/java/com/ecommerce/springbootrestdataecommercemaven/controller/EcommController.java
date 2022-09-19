@@ -39,7 +39,7 @@ public class EcommController {
 	}
 	
 	@PostMapping("")
-	public OrderPojo addtoCart(@Valid @RequestBody List<ProductPojo> orderItems) {
+	public OrderPojo addtoCart(@Valid @RequestBody List<OrderPojo> orderItems) {
 		return service.addtoCart(orderItems);
 	}
 

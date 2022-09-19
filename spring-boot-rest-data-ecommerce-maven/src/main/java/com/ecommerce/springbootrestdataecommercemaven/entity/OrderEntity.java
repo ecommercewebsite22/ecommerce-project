@@ -35,12 +35,13 @@ public class OrderEntity {
 	private Integer orderNo;
 	
 	@Column(name = "user_id")
-	private int userID;
+	private Integer userID;
 	
 	@Column(name = "order_date")
 	private Timestamp date;
 	
 	@Column(name = "order_status")
-	private String orderStatus;
+	private Boolean orderStatus;
+	
 
 }

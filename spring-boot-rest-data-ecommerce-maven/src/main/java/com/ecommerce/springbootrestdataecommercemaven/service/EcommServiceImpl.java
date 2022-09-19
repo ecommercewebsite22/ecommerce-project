@@ -1,5 +1,6 @@
 package com.ecommerce.springbootrestdataecommercemaven.service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce.springbootrestdataecommercemaven.dao.UserDao;
+import com.ecommerce.springbootrestdataecommercemaven.entity.OrderEntity;
 import com.ecommerce.springbootrestdataecommercemaven.entity.UserEntity;
 import com.ecommerce.springbootrestdataecommercemaven.pojo.OrderPojo;
 import com.ecommerce.springbootrestdataecommercemaven.pojo.ProductPojo;
@@ -45,20 +47,20 @@ public class EcommServiceImpl implements EcommService {
 		return fecthedUserPojo;
 	}
 
+	@SuppressWarnings("null")
 	@Override
-	public OrderPojo addtoCart(List<ProductPojo> orderItems) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	//@Override
-	/*public OrderPojo addtoCart(List<ProductPojo> orderItems) {
+	public OrderPojo addtoCart(List<OrderPojo> orderItems) {
 		OrderEntity newOrderEntity = new OrderEntity();
+		OrderPojo order = new OrderPojo();
+		
+//		orderItems.set(0, order.getOrderNo());
+//		orderItems.set(1, order.getUserID());
+//		orderItems.set(2, order.getDate());
+//		orderItems.set(3, order.getOrderStatus());
+		
 		BeanUtils.copyProperties(orderItems, newOrderEntity);
 		//OrderEntity newOrderEntity = userDao.saveAndFlush(newOrderEntity);
-		
-		//return orderItems;
-	}*/
-	
+		return null;
+	}
 
 }

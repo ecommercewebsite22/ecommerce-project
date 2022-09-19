@@ -21,7 +21,7 @@ import lombok.ToString;
 public class OrderPojo {
 	@NotNull
 	private Integer orderNo, userID;
-	@NotNull
+	
 	private String date;
 	@NotNull
 	private Boolean orderStatus;

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
-@EntityScan("com.ecommerce.springbootrestrestecommercemaven.entity")
+@EntityScan("com.ecommerce.springbootrestdataecommercemaven.entity")
 public class SpringBootRestDataEcommerceMavenApplication {
 
 	public static void main(String[] args) {
